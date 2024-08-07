@@ -1,0 +1,53 @@
+/* DeliveryInfoForm.css */
+
+.delivery-info-form {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .delivery-info-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .delivery-info-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .delivery-info-form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .delivery-info-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delivery-info-form button:hover {
+    background-color: #218838;
+  }
+  
+  .delivery-info-form .error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
