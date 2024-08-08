@@ -14,7 +14,7 @@ const LoginSignup = () => {
   const login= async()=>{
     console.log("Login fun",formData);
     let responseData;
-    await fetch('https://shopping-backend-ch7k.onrender.com/login',{
+    await fetch('https://shopping-backendd.onrender.com/login',{
       method:'POST',
       headers:{
         Accept:'application/form-data',
@@ -35,7 +35,7 @@ const LoginSignup = () => {
   const signup= async()=>{
     console.log("signup",formData);
     let responseData;
-    await fetch('https://shopping-backend-ch7k.onrender.com/signup',{
+    await fetch('https://shopping-backendd.onrender.com/signup',{
       method:'POST',
       headers:{
         Accept:'application/form-data',

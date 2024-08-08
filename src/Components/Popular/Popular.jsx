@@ -5,7 +5,7 @@ import Item from '../Item/Item'
 const Popular = () => {
   const [popularProducts,setpopularProducts]=useState([])
   useEffect(()=>{
-    fetch('https://shopping-backend-ch7k.onrender.com/popularinwomen')
+    fetch('https://shopping-backendd.onrender.com/popularinwomen')
     .then((response)=>response.json())
     .then((data)=>setpopularProducts(data));
   },[])

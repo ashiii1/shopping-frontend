@@ -142,12 +142,12 @@ const ShopContextProvider = (props) => {
     const [wishlistItems, setWishlistItems] = useState(getDefaultWishlist());
 
     useEffect(() => {
-        fetch('https://shopping-backend-ch7k.onrender.com/allproducts')
+        fetch('https://shopping-backendd.onrender.com/allproducts')
             .then((response) => response.json())
             .then((data) => setAll_Product(data));
 
         if (localStorage.getItem('auth-token')) {
-            fetch('https://shopping-backend-ch7k.onrender.com/getcart', {
+            fetch('https://shopping-backendd.onrender.com/getcart', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',
@@ -158,7 +158,7 @@ const ShopContextProvider = (props) => {
             }).then((response) => response.json())
                 .then((data) => setCartItems(data));
 
-            fetch('https://shopping-backend-ch7k.onrender.com/getwishlist', {
+            fetch('https://shopping-backendd.onrender.com/getwishlist', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',
@@ -174,7 +174,7 @@ const ShopContextProvider = (props) => {
     const addToCart = (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
         if (localStorage.getItem('auth-token')) {
-            fetch('https://shopping-backend-ch7k.onrender.com/addtocart', {
+            fetch('https://shopping-backendd.onrender.com/addtocart', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',
@@ -191,7 +191,7 @@ const ShopContextProvider = (props) => {
     const removeFromCart = (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
         if (localStorage.getItem('auth-token')) {
-            fetch('https://shopping-backend-ch7k.onrender.com/removefromcart', {
+            fetch('https://shopping-backendd.onrender.com/removefromcart', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',
@@ -208,7 +208,7 @@ const ShopContextProvider = (props) => {
     const addToWishlist = (itemId) => {
         setWishlistItems((prev) => [...prev, itemId]);
         if (localStorage.getItem('auth-token')) {
-            fetch('https://shopping-backend-ch7k.onrender.com/addtowishlist', {
+            fetch('https://shopping-backendd.onrender.com/addtowishlist', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',
@@ -225,7 +225,7 @@ const ShopContextProvider = (props) => {
     const removeFromWishlist = (itemId) => {
         setWishlistItems((prev) => prev.filter((id) => id !== itemId));
         if (localStorage.getItem('auth-token')) {
-            fetch('https://shopping-backend-ch7k.onrender.com/removefromwishlist', {
+            fetch('https://shopping-backendd.onrender.com/removefromwishlist', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',
